@@ -55,7 +55,7 @@ export const PROGRAM_DATA: RecitalSection[] = [
         order: 3,
         performer: "Hadassa Maria Mury de Aquino Santos",
         songs: [
-          { title: "Aos olhos do Pai" }
+          { title: "------" }
         ]
       },
       {
