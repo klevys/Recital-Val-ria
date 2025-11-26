@@ -52,10 +52,15 @@ const Hero: React.FC = () => {
           </a>
         </div>
 
-        <div className="inline-flex items-center gap-2 mt-4 text-gold-300 hover:text-gold-100 transition-colors cursor-pointer">
-          <MapPin className="w-4 h-4" />
-          <span className="border-b border-gold-700">{RECITAL_INFO.location}</span>
-        </div>
+        <a 
+          href={RECITAL_INFO.locationUrl}
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 mt-4 text-gold-300 hover:text-gold-100 transition-colors cursor-pointer group"
+        >
+          <MapPin className="w-4 h-4 group-hover:animate-bounce" />
+          <span className="border-b border-gold-700 group-hover:border-gold-300">{RECITAL_INFO.location}</span>
+        </a>
       </div>
     </div>
   );
