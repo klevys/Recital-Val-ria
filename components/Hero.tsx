@@ -4,9 +4,9 @@ import { RECITAL_INFO } from '../constants';
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative overflow-hidden bg-stone-900 text-gold-50 pb-16 pt-24 px-6 rounded-b-[3rem] shadow-xl">
+    <div className="relative overflow-hidden bg-stone-900 text-gold-50 pb-20 pt-24 px-6 rounded-b-[3rem] shadow-xl">
       {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+      <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none z-0">
         <svg viewBox="0 0 400 400" className="w-full h-full object-cover">
           <path d="M0,200 Q100,100 200,200 T400,200" fill="none" stroke="currentColor" strokeWidth="2" />
           <path d="M0,250 Q100,150 200,250 T400,250" fill="none" stroke="currentColor" strokeWidth="2" />
@@ -14,14 +14,14 @@ const Hero: React.FC = () => {
         </svg>
       </div>
 
-      <div className="relative max-w-3xl mx-auto text-center space-y-6">
+      <div className="relative z-20 max-w-3xl mx-auto text-center space-y-6">
         <div className="flex justify-center mb-4">
-           <div className="p-3 bg-gold-600 rounded-full bg-opacity-20 backdrop-blur-sm border border-gold-500/30">
+           <div className="p-3 bg-gold-600 rounded-full bg-opacity-20 backdrop-blur-sm border border-gold-500/30 shadow-glow">
               <Music className="w-8 h-8 text-gold-400" />
            </div>
         </div>
         
-        <h1 className="font-serif text-4xl md:text-6xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-gold-100 to-gold-400">
+        <h1 className="font-serif text-4xl md:text-6xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-gold-100 to-gold-400 drop-shadow-sm">
           {RECITAL_INFO.title}
         </h1>
         
@@ -29,13 +29,13 @@ const Hero: React.FC = () => {
           {RECITAL_INFO.teacher}
         </p>
 
-        <div className="flex flex-col items-center gap-4 mt-8">
+        <div className="flex flex-col items-center gap-5 mt-8">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-sm md:text-base font-medium">
-            <div className="flex items-center gap-2 bg-stone-800/50 px-4 py-2 rounded-full border border-stone-700 backdrop-blur-md">
+            <div className="flex items-center gap-2 bg-stone-800/80 px-5 py-2.5 rounded-full border border-stone-700 backdrop-blur-md shadow-md">
               <Calendar className="w-4 h-4 text-gold-500" />
               <span>{RECITAL_INFO.date}</span>
             </div>
-            <div className="flex items-center gap-2 bg-stone-800/50 px-4 py-2 rounded-full border border-stone-700 backdrop-blur-md">
+            <div className="flex items-center gap-2 bg-stone-800/80 px-5 py-2.5 rounded-full border border-stone-700 backdrop-blur-md shadow-md">
               <Clock className="w-4 h-4 text-gold-500" />
               <span>{RECITAL_INFO.time}</span>
             </div>
@@ -45,22 +45,24 @@ const Hero: React.FC = () => {
             href={RECITAL_INFO.googleCalendarUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-stone-900 bg-gold-400 hover:bg-gold-300 rounded-full transition-colors shadow-lg shadow-gold-900/20"
+            className="flex items-center gap-2 px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-stone-900 bg-gold-400 hover:bg-gold-300 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-gold-900/30"
           >
             <CalendarPlus className="w-4 h-4" />
             Adicionar à Agenda
           </a>
         </div>
 
-        <a 
-          href={RECITAL_INFO.locationUrl}
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 mt-4 text-gold-300 hover:text-gold-100 transition-colors cursor-pointer group"
-        >
-          <MapPin className="w-4 h-4 group-hover:animate-bounce" />
-          <span className="border-b border-gold-700 group-hover:border-gold-300">{RECITAL_INFO.location}</span>
-        </a>
+        <div className="pt-2">
+            <a 
+            href={RECITAL_INFO.locationUrl}
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 text-gold-300 hover:text-gold-100 transition-colors cursor-pointer group rounded-lg hover:bg-white/5"
+            >
+            <MapPin className="w-5 h-5 text-gold-500 group-hover:animate-bounce" />
+            <span className="border-b border-dashed border-gold-700 group-hover:border-gold-300 pb-0.5">{RECITAL_INFO.location}</span>
+            </a>
+        </div>
       </div>
     </div>
   );

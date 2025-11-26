@@ -18,12 +18,12 @@ const PerformanceCard: React.FC<PerformanceCardProps> = ({ item, isActive, isCom
       viewport={{ once: true }}
       onClick={onClick}
       className={`
-        relative p-6 rounded-2xl transition-all duration-300 cursor-pointer border
+        relative p-6 rounded-2xl transition-all duration-300 cursor-pointer border select-none
         ${isActive 
-          ? 'bg-white shadow-lg border-gold-400 scale-[1.02] z-10' 
+          ? 'bg-white shadow-xl border-gold-400 ring-1 ring-gold-200 scale-[1.02] z-10' 
           : isCompleted
-            ? 'bg-stone-100 opacity-60 border-transparent hover:opacity-80'
-            : 'bg-white shadow-sm border-stone-200 hover:border-gold-300'
+            ? 'bg-stone-100 opacity-60 border-transparent hover:opacity-80 grayscale-[0.5]'
+            : 'bg-white shadow-sm border-stone-200 hover:border-gold-300 hover:shadow-md'
         }
       `}
     >
@@ -32,19 +32,19 @@ const PerformanceCard: React.FC<PerformanceCardProps> = ({ item, isActive, isCom
           {/* Order Badge */}
           <div className="flex items-center gap-3 mb-2">
             <span className={`
-              text-xs font-bold px-2 py-1 rounded-md
+              text-xs font-bold px-2 py-1 rounded-md min-w-[2rem] text-center
               ${isActive ? 'bg-gold-500 text-white' : 'bg-stone-200 text-stone-600'}
             `}>
               {String(item.order).padStart(2, '0')}
             </span>
             {isActive && (
-              <span className="text-xs font-semibold text-gold-600 animate-pulse flex items-center gap-1">
-                <PlayCircle className="w-3 h-3" /> Acontecendo agora
+              <span className="text-xs font-bold text-gold-600 animate-pulse flex items-center gap-1.5 bg-gold-50 px-2 py-0.5 rounded-full border border-gold-100">
+                <PlayCircle className="w-3.5 h-3.5" /> EM ANDAMENTO
               </span>
             )}
             {isCompleted && (
                <span className="text-xs font-semibold text-stone-500 flex items-center gap-1">
-               <CheckCircle2 className="w-3 h-3" /> Apresentado
+               <CheckCircle2 className="w-3.5 h-3.5" /> Apresentado
              </span>
             )}
           </div>
@@ -60,7 +60,7 @@ const PerformanceCard: React.FC<PerformanceCardProps> = ({ item, isActive, isCom
           {/* Songs List */}
           <div className="space-y-3">
             {item.songs.map((song, idx) => (
-              <div key={idx} className="border-l-2 border-gold-200 pl-3">
+              <div key={idx} className={`border-l-2 pl-3 transition-colors ${isActive ? 'border-gold-400' : 'border-stone-300'}`}>
                 <p className="font-medium text-stone-800 leading-snug">
                   {song.title}
                 </p>
