@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Clock, MapPin, Music } from 'lucide-react';
+import { Calendar, Clock, MapPin, Music, CalendarPlus } from 'lucide-react';
 import { RECITAL_INFO } from '../constants';
 
 const Hero: React.FC = () => {
@@ -29,15 +29,27 @@ const Hero: React.FC = () => {
           {RECITAL_INFO.teacher}
         </p>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mt-8 text-sm md:text-base font-medium">
-          <div className="flex items-center gap-2 bg-stone-800/50 px-4 py-2 rounded-full border border-stone-700 backdrop-blur-md">
-            <Calendar className="w-4 h-4 text-gold-500" />
-            <span>{RECITAL_INFO.date}</span>
+        <div className="flex flex-col items-center gap-4 mt-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-sm md:text-base font-medium">
+            <div className="flex items-center gap-2 bg-stone-800/50 px-4 py-2 rounded-full border border-stone-700 backdrop-blur-md">
+              <Calendar className="w-4 h-4 text-gold-500" />
+              <span>{RECITAL_INFO.date}</span>
+            </div>
+            <div className="flex items-center gap-2 bg-stone-800/50 px-4 py-2 rounded-full border border-stone-700 backdrop-blur-md">
+              <Clock className="w-4 h-4 text-gold-500" />
+              <span>{RECITAL_INFO.time}</span>
+            </div>
           </div>
-          <div className="flex items-center gap-2 bg-stone-800/50 px-4 py-2 rounded-full border border-stone-700 backdrop-blur-md">
-            <Clock className="w-4 h-4 text-gold-500" />
-            <span>{RECITAL_INFO.time}</span>
-          </div>
+          
+          <a 
+            href={RECITAL_INFO.googleCalendarUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-stone-900 bg-gold-400 hover:bg-gold-300 rounded-full transition-colors shadow-lg shadow-gold-900/20"
+          >
+            <CalendarPlus className="w-4 h-4" />
+            Adicionar à Agenda
+          </a>
         </div>
 
         <div className="inline-flex items-center gap-2 mt-4 text-gold-300 hover:text-gold-100 transition-colors cursor-pointer">

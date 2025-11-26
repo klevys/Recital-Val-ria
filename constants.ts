@@ -6,7 +6,9 @@ export const RECITAL_INFO = {
   date: "1º de Dezembro",
   time: "19h30",
   location: "Auditório Trilhar",
-  locationUrl: "https://maps.google.com/?q=Auditorio+Trilhar", // Placeholder for actual map link if known
+  locationUrl: "https://maps.app.goo.gl/x5Lzz7FFRcNc8D47A", // Placeholder
+  // Date: Dec 1, 2025, 19:30 - 21:30 (Approx 2 hours)
+  googleCalendarUrl: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=4%C2%BA%20Recital%20de%20Alunos%20-%20Prof%C2%AA%20Valeria%20Mitt&dates=20251201T193000/20251201T213000&details=Recital%20de%20Piano%20e%20outros%20instrumentos%20com%20alunos%20da%20Prof%C2%AA%20Valeria%20Mitt.&location=Audit%C3%B3rio%20Trilhar"
 };
 
 export const PROGRAM_DATA: RecitalSection[] = [
