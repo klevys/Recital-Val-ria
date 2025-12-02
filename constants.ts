@@ -8,7 +8,8 @@ export const RECITAL_INFO = {
   location: "Auditório Trilhar",
   locationUrl: "https://maps.app.goo.gl/x5Lzz7FFRcNc8D47A", 
   // Date: Dec 1, 2025, 19:30 - 21:30 (Approx 2 hours)
-  googleCalendarUrl: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=4%C2%BA%20Recital%20de%20Alunos%20-%20Prof%C2%AA%20Valeria%20Mitt&dates=20251201T193000/20251201T213000&details=Recital%20de%20Piano%20e%20outros%20instrumentos%20com%20alunos%20da%20Prof%C2%AA%20Valeria%20Mitt.&location=Audit%C3%B3rio%20Trilhar"
+  googleCalendarUrl: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=4%C2%BA%20Recital%20de%20Alunos%20-%20Prof%C2%AA%20Valeria%20Mitt&dates=20251201T193000/20251201T213000&details=Recital%20de%20Piano%20e%20outros%20instrumentos%20com%20alunos%20da%20Prof%C2%AA%20Valeria%20Mitt.&location=Audit%C3%B3rio%20Trilhar",
+  photosUrl: "https://photos.app.goo.gl/iQn36kXrvoTpX5k28"
 };
 
 export const PROGRAM_DATA: RecitalSection[] = [
@@ -91,6 +92,7 @@ export const PROGRAM_DATA: RecitalSection[] = [
         id: 'g1',
         order: 6,
         groupName: "VOCAL - Grupo",
+        performer: "Laís, Regiane, Verônica, Valéria, Vanessa, Klévys, Nemuel, Augusto e Renato",
         songs: [
           { title: "O Canto de Maria", composer: "Coral alemão medieval (Alta C. Faireloth/Trad. Joan Sutton)" },
           { title: "Manso é Bom Jesus", composer: "F. A. Gevaert" }
@@ -100,6 +102,7 @@ export const PROGRAM_DATA: RecitalSection[] = [
         id: 'g2',
         order: 7,
         groupName: "FLAUTAS",
+        performer: "Nemuel, Valéria, Vanessa, Verônica, Werner, Augusto e Carlos Jamaica",
         songs: [
           { title: "Natal", composer: "Martinho Lutero-1535 / Harm. J. S. Bach-1734" },
           { title: "Exulta, Coração!", composer: "P. Gerhardt-1656 / J.J. Ereling-1666 / Harm. J.S. Bach-1734" }

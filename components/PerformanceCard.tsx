@@ -49,13 +49,31 @@ const PerformanceCard: React.FC<PerformanceCardProps> = ({ item, isActive, isCom
             )}
           </div>
 
-          {/* Performer Name */}
-          <h3 className={`
-            font-serif text-lg md:text-xl font-bold mb-3 leading-tight
-            ${isActive ? 'text-stone-900' : 'text-stone-700'}
-          `}>
-            {item.performer || item.groupName}
-          </h3>
+          {/* Titles & Performers */}
+          <div className="mb-3">
+            {item.groupName ? (
+              <>
+                <h3 className={`
+                  font-serif text-lg md:text-xl font-bold leading-tight
+                  ${isActive ? 'text-stone-900' : 'text-stone-700'}
+                `}>
+                  {item.groupName}
+                </h3>
+                {item.performer && (
+                  <p className="text-sm text-stone-500 mt-1 font-medium leading-relaxed">
+                    {item.performer}
+                  </p>
+                )}
+              </>
+            ) : (
+              <h3 className={`
+                font-serif text-lg md:text-xl font-bold leading-tight
+                ${isActive ? 'text-stone-900' : 'text-stone-700'}
+              `}>
+                {item.performer}
+              </h3>
+            )}
+          </div>
 
           {/* Songs List */}
           <div className="space-y-3">
