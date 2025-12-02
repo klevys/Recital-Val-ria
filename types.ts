@@ -1,3 +1,4 @@
+
 export enum SectionType {
   OPENING = 'OPENING',
   PIANO = 'PIANO',
@@ -30,4 +31,10 @@ export interface RecitalSection {
 export interface LyricSection {
   title: string;
   verses: string[]; // Each string is a stanza
+}
+
+export interface VideoItem {
+  title: string;
+  embedUrl: string;
+  caption: string;
 }

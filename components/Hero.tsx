@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Clock, MapPin, Music, CalendarPlus, Camera, ChevronRight, Star } from 'lucide-react';
+import { Calendar, Clock, MapPin, Music, CalendarPlus } from 'lucide-react';
 import { RECITAL_INFO } from '../constants';
 
 const Hero: React.FC = () => {
@@ -28,42 +28,6 @@ const Hero: React.FC = () => {
         <p className="text-xl md:text-2xl font-light tracking-widest uppercase text-gold-200">
           {RECITAL_INFO.teacher}
         </p>
-
-        {/* --- HERO BANNER FOR PHOTOS/VOTING --- */}
-        <div className="py-6 w-full flex justify-center">
-            <a 
-              href={RECITAL_INFO.photosUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative w-full max-w-md block transform transition-all hover:scale-105 duration-300"
-            >
-              {/* Animated Glow Effect behind */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-gold-400 via-yellow-200 to-gold-400 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-              
-              <div className="relative flex items-center bg-stone-900 border border-gold-400/50 rounded-xl px-6 py-5 shadow-2xl overflow-hidden">
-                {/* Decorative background circle inside card */}
-                <div className="absolute right-0 top-0 -mt-4 -mr-4 w-24 h-24 bg-gold-500/10 rounded-full blur-xl"></div>
-
-                <div className="flex-shrink-0 bg-gradient-to-br from-gold-400 to-gold-600 p-4 rounded-xl shadow-lg text-stone-900 mr-5">
-                  <Camera className="w-8 h-8" />
-                </div>
-                
-                <div className="flex-1 text-left">
-                  <div className="flex items-center gap-2 mb-1">
-                    <Star className="w-3 h-3 text-gold-400 fill-current animate-pulse" />
-                    <span className="text-gold-400 text-xs font-bold tracking-widest uppercase">Área Interativa</span>
-                  </div>
-                  <h3 className="text-white font-serif text-xl md:text-2xl font-bold leading-none mb-1 group-hover:text-gold-200 transition-colors">
-                    Fotos & Videos
-                  </h3>
-                  <p className="text-stone-400 text-xs md:text-sm">Clique para ver fotos e videos</p>
-                </div>
-
-                <ChevronRight className="w-6 h-6 text-gold-500 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </a>
-        </div>
-        {/* ------------------------------------- */}
 
         <div className="flex flex-col items-center gap-6 mt-2">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-sm md:text-base font-medium text-stone-300">
