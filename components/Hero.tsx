@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
                     <span className="text-gold-400 text-xs font-bold tracking-widest uppercase">Área Interativa</span>
                   </div>
                   <h3 className="text-white font-serif text-xl md:text-2xl font-bold leading-none mb-1 group-hover:text-gold-200 transition-colors">
-                    Galeria & Votação
+                    Fotos & Videos
                   </h3>
                   <p className="text-stone-400 text-xs md:text-sm">Clique para ver fotos e videos</p>
                 </div>
